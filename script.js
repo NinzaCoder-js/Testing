@@ -9,7 +9,21 @@ let testSavollar = [
       variantlar: ["Merkuriy", "Venera", "Mars"],
       togriJavob: 1
     },
-    
+    {
+      savollar: "Apple kompaniyasi asoschisi kim?",
+      variantlar: ["Mark Sukerberg", "Stiv Jobs", "Ilon Mask"],
+      togriJavob: 2
+    },
+    {
+      savollar: "Qaysi dasturlash tili 10 kun ichida yaratilgan?",
+      variantlar: ["Python", "Swift", "JavaScript"],
+      togriJavob: 3
+    },
+    {
+      savollar: "Qaysi dasturlash tili 10 kun ichida yaratilgan?",
+      variantlar: ["Python", "Swift", "JavaScript"],
+      togriJavob: 3
+    },  
   ];
   
  
@@ -45,5 +59,4 @@ let testSavollar = [
     console.log(`To'g'ri javoblar koeffisienti: ${togrilikKoeffisenti}%`);
   }
   
-
   startTest();
