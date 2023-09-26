@@ -20,8 +20,8 @@ let testSavollar = [
       togriJavob: 3
     },
     {
-      savollar: "Qaysi dasturlash tili 10 kun ichida yaratilgan?",
-      variantlar: ["Python", "Swift", "JavaScript"],
+      savollar: "Suvda atom bormi?",
+      variantlar: ["iye Atom bombaku", "Sizdachi zizi bormi", "Albatta hama atom suvdaku"],
       togriJavob: 3
     },  
   ];
@@ -42,7 +42,7 @@ let testSavollar = [
         console.log(`${j + 1}. ${variantlar[j]}`);
       }
   
-      let userAnswer = +(prompt("Javobingizni tanlang: (1, 2, or 3):"));
+      let userAnswer = +(prompt("Javobingizni tanlang: (1, 2, yoki 3):"));
   
       if (userAnswer == testSavollar[i].togriJavob) {
         togrijavob++;
