@@ -6,13 +6,23 @@
 }
 
 body{
-    background-color:rgb(80, 80, 80);
+    background: linear-gradient(to right, red , yellow);
 }
 
-h1 {
+
+
+.hero h1 {
+    background: repeating-linear-gradient(red, yellow 10%, green 20%);
     text-align: center;
     align-items: center;
     font-size: 200px;
     font-weight: 900;
-    background: repeating-linear-gradient(red, yellow 10%, green 20%);
+    
+}
+
+.hero p {
+    font-size: 40px;
+    font-weight: 600;
+    padding: 0px 120px;
+
 }

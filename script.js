@@ -26,13 +26,14 @@ let testSavollar = [
     },  
   ];
   
- 
+ let chekbox=true;
   function startTest() {
-    // let chekbox=true;
-    // while (chekbox){  
-    // }
     
-    let startTime = new Date(); 
+    while (chekbox){  
+      let checking = +prompt("Testga kim sifatida kirmoqchisiz (1 yoki 2)? \n 1)Talaba \n 2)O'qituvchi");
+      if (checking==1){
+
+        let startTime = new Date(); 
   
     let togrijavob = 0;
   
@@ -57,10 +58,31 @@ let testSavollar = [
     let workingTime = (endTime - startTime) / 1000; 
   
     let togrilikKoeffisenti = (togrijavob / testSavollar.length) * 100;
+
+    
   
     console.log(`Test ${workingTime} sekund ichida tugadi.`);
     console.log(`To'g'ri javoblar soni: ${togrijavob}`);
     console.log(`To'g'ri javoblar koeffisienti: ${togrilikKoeffisenti}%`);
+    alert("Natijangiz console oynaga chiqti .");
+
+    chekbox=false;
+
+
+
+      }
+
+      else if (checking==2){
+        alert("Hali o'qituvchi bo'lishga noloiqsiz !");
+        chekbox=false;
+      }
+
+      else {
+        alert("Sizni 1 va 2 dan boshqa raqam kiritishga haqqiz yo'q !! \n Mayli sizga yana bir marta imkon beramiz :)  OK ni bosing xo'jayin");
+      }
+    }
+    
+    
   }
   
   startTest();
