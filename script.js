@@ -28,6 +28,11 @@ let testSavollar = [
   
  
   function startTest() {
+    let chekbox=true;
+    while (chekbox){
+      
+    }
+    
     let startTime = new Date(); 
   
     let togrijavob = 0;
