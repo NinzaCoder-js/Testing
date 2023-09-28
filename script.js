@@ -30,8 +30,9 @@ let testSavollar = [
   function startTest() {
     
     while (chekbox){  
-      let checking = +prompt("Testga kim sifatida kirmoqchisiz (1 yoki 2)? \n 1)Talaba \n 2)O'qituvchi");
+      let checking = +prompt("Testga kim sifatida kirmoqchisiz (1 , 2 yoki 3 )? \n 1)Talaba \n 2)O'qituvchi \n 3)Chiqish" );
       if (checking==1){
+        alert("Testni boshlash uchun OK ni bosing !");
 
         let startTime = new Date(); 
   
@@ -41,13 +42,8 @@ let testSavollar = [
       let savollar = testSavollar[i].savollar;
       let variantlar = testSavollar[i].variantlar;
   
-      console.log(` ${i + 1}-savol: ${savollar}`);
-      console.log("Javoblar:");
-      for (let j = 0; j < variantlar.length; j++) {
-        console.log(`${j + 1}. ${variantlar[j]}`);
-      }
   
-      let userAnswer = +(prompt("Javobingizni tanlang: (1, 2, yoki 3):"));
+      let userAnswer = +(prompt(`${i + 1}-savol: ${savollar} \nJavoblar: \n${1}. ${variantlar[0]} \n${2}. ${variantlar[1]} \n${3}. ${variantlar[2]} \nJavobingizni tanlang: (1, 2, yoki 3):`));
   
       if (userAnswer == testSavollar[i].togriJavob) {
         togrijavob++;
@@ -59,26 +55,23 @@ let testSavollar = [
   
     let togrilikKoeffisenti = (togrijavob / testSavollar.length) * 100;
 
-    
-  
-    console.log(`Test ${workingTime} sekund ichida tugadi.`);
-    console.log(`To'g'ri javoblar soni: ${togrijavob}`);
-    console.log(`To'g'ri javoblar koeffisienti: ${togrilikKoeffisenti}%`);
-    alert("Natijangiz console oynaga chiqti .");
+    alert(`Test natijari: \nTest ${workingTime} sekund ichida tugadi. \nTo'g'ri javoblar soni: ${togrijavob} \nTo'g'ri javoblar koeffisienti: ${togrilikKoeffisenti}%`);
 
     chekbox=false;
-
 
 
       }
 
       else if (checking==2){
         alert("Hali o'qituvchi bo'lishga noloiqsiz !");
+      }
+
+      else if (checking==3){
         chekbox=false;
       }
 
       else {
-        alert("Sizni 1 va 2 dan boshqa raqam kiritishga haqqiz yo'q !! \n Mayli sizga yana bir marta imkon beramiz :)  OK ni bosing xo'jayin");
+        alert("Sizni 1 , 2 va 3 dan boshqa raqam kiritishga haqqiz yo'q !! \n Mayli sizga yana bir marta imkon beramiz :)  OK ni bosing xo'jayin");
       }
     }
     
