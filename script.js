@@ -71,15 +71,42 @@ let testSavollar = [
           
          let loginTeacher = +prompt("Assalomu alaykum ustoz !\nMarhamat Login parolizni kiriting (6 xonali son):");
          if (loginTeacher==654321){
-          let chooseTecher = +prompt("Quydagilardan birini tanlang (1 yoki 2)!\n 1)Test qo'shish \n 2)Testni tahrirlash");
+          let chooseTecher = +prompt("Quydagilardan birini tanlang (1 yoki 2)!\n 1)Test qo'shish \n 2)Chiqish");
           
           if (chooseTecher==1) {
-            alert("hali mavjud emas")
+          
+            againAddQue = true;
+            while(againAddQue){
+              let savol = prompt("Savolni kiriting :");
+              let var1 = prompt("1 - variantni kiriting :");
+              let var2 = prompt("2 - variantni kiriting :");
+              let var3 = prompt("3 - variantni kiriting :");
+
+              togri = +prompt(`${savol} \n1. ${var1}\n2. ${var2}\n3 .${var3} \nto'g'ri javobni tanlang : (1 , 2 yoki 3)`) ;
+              let arr = [];
+              arr.push(var1,var2,var3);
+              testSavollar.push ({
+                  savollar: savol,
+                  variantlar: arr,
+                  togriJavob: togri,
+                });
+
+              let addAgainQue = +prompt("Yana savol kiritishni xoxlaysizmi ? \n1) Ha \n2)Yo'q yetarli ");
+              if (addAgainQue==2){againAddQue=false;}
+              else if (addAgainQue==1) {
+                againAddQue=true;
+              }
+
+              else {againAddQue=false;}
+
+            }
+           
+
             logincheck=false
           }
           
           else if (chooseTecher==2) {
-            alert("hali mavjud emas")
+            chekbox=false;
             logincheck=false
           }
   
