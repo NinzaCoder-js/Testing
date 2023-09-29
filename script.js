@@ -55,7 +55,7 @@ let testSavollar = [
   
     let togrilikKoeffisenti = (togrijavob / testSavollar.length) * 100;
 
-    alert(`Test natijalari: 2\nTest ${workingTime} sekund ichida tugadi. \nTo'g'ri javoblar soni: ${togrijavob} \nTo'g'ri javoblar koeffisienti: ${togrilikKoeffisenti}%`);
+    alert(`Test natijalari: \nTest ${workingTime} sekund ichida tugadi. \nTo'g'ri javoblar soni: ${togrijavob} \nTo'g'ri javoblar koeffisienti: ${togrilikKoeffisenti}%`);
 
     chekbox=false;
 
@@ -63,7 +63,32 @@ let testSavollar = [
       }
 
       else if (checking==2){
-        // alert("Hali o'qituvchi bo'lishga noloiqsiz !");
+        let logincheck=true
+        while (logincheck){
+
+        
+       let loginTeacher = +prompt("Assalomu alaykum ustoz !\nMarhamat Login parolizni kiriting (6 xonali son):");
+       if (loginTeacher==654321){
+        let chooseTecher = +prompt("Quydagilardan birini tanlang (1 yoki 2)!\n 1)Test qo'shish \n 2)Testni tahrirlash");
+        
+        if (chooseTecher==1) {
+          alert("hali mavjudmas")
+          logincheck=false
+        }
+        
+        else if (chooseTecher==2) {
+          alert("hali mavjudmas")
+          logincheck=false
+        }
+
+        logincheck=false
+       }
+
+       else {
+        alert("Sizning login paroliz => 654321 qaytadan urunib ko'ring ! \nP/S : Login parolizni unutmang* !")
+       }
+
+      }
 
         
       }

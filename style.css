@@ -21,8 +21,12 @@ body{
 }
 
 .hero p {
+    margin-top: 100px;
+    text-align: center;
+    align-items: center;
     font-size: 40px;
     font-weight: 600;
     padding: 0px 120px;
+    color: #202020;
 
 }
