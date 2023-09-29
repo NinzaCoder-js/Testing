@@ -55,7 +55,7 @@ let testSavollar = [
   
     let togrilikKoeffisenti = (togrijavob / testSavollar.length) * 100;
 
-    alert(`Test natijari: \nTest ${workingTime} sekund ichida tugadi. \nTo'g'ri javoblar soni: ${togrijavob} \nTo'g'ri javoblar koeffisienti: ${togrilikKoeffisenti}%`);
+    alert(`Test natijalari: 2\nTest ${workingTime} sekund ichida tugadi. \nTo'g'ri javoblar soni: ${togrijavob} \nTo'g'ri javoblar koeffisienti: ${togrilikKoeffisenti}%`);
 
     chekbox=false;
 
@@ -63,7 +63,9 @@ let testSavollar = [
       }
 
       else if (checking==2){
-        alert("Hali o'qituvchi bo'lishga noloiqsiz !");
+        // alert("Hali o'qituvchi bo'lishga noloiqsiz !");
+
+        
       }
 
       else if (checking==3){
