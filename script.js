@@ -25,6 +25,26 @@ let testSavollar = [
       togriJavob: 3
     },  
   ];
+
+  function getRandomisedQuestions(testSavollar) {
+    let randomisedQuestions = new Set();
+  
+    do {
+      let randomisedIndex = Math.floor(Math.random() * testSavollar.length);
+      randomisedQuestions.add(testSavollar[randomisedIndex]);
+    } while (randomisedQuestions.size != testSavollar.length);
+  
+      for (let i = 0; i < testSavollar.length; i++) {
+        let randomisedIndex = Math.floor(Math.random() * testSavollar.length);
+        randomisedQuestions.add(testSavollar[randomisedIndex]);
+      }
+  
+    return randomisedQuestions;
+  }
+
+  let newRandomisedQuestions = Array.from(getRandomisedQuestions(testSavollar));
+  testSavollar = newRandomisedQuestions;
+
   
   let wellcome = +prompt("Assalamu alaykum \nTesting Site - saytimizga Xush kelibsiz hurmatli mijoz \nTesting Site - sayti bilan tanishsh => 1 \nTestni boshlash =>2 ");
 
@@ -36,8 +56,7 @@ let testSavollar = [
         if (checking==1){
           alert("Testni boshlash uchun OK ni bosing !");
   
-          let startTime = new Date(); 
-    
+      let startTime = new Date(); 
       let togrijavob = 0;
     
       for (let i = 0; i < testSavollar.length; i++) {
@@ -118,9 +137,7 @@ let testSavollar = [
          }
   
         }
-  
-          
-        }
+       }
   
         else if (checking==3){
           chekbox=false;
@@ -135,6 +152,5 @@ let testSavollar = [
     }
   }
  
-  
   
   startTest();
