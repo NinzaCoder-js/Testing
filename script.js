@@ -42,6 +42,32 @@ let testSavollar = [
     return randomisedQuestions;
   }
 
+  function editTest(testSavollar) {
+    let n = prompt(
+      "Tahrirlamochi bo'lgan testni raqamini kiriting\n" +
+        getQuestionsList(testSavollar)
+    );
+    testSavollar[n - 1] = {
+      savollar: prompt("Savolni kiriting: ", testSavollar[n - 1].savollar),
+      variantlar: [
+        prompt("1. variatni kiriting: ", testSavollar[n - 1].variantlar[0]),
+        prompt("2. variatni kiriting: ", testSavollar[n - 1].variantlar[2]),
+        prompt("3. variatni kiriting: ", testSavollar[n - 1].variantlar[1]),
+      ],
+      togriJavob: prompt("to'g'ri javob: ", testSavollar[n - 1].togriJavob),
+    };
+    alert(getQuestionsList(testSavollar));
+  }
+  
+  function getQuestionsList(savollar) {
+    let list = "";
+    for (let i = 0; i < savollar.length; i++) {
+      list += i + 1 + savollar[i].savollar + "\n";
+    }
+    return list;
+  }
+  
+
   let newRandomisedQuestions = Array.from(getRandomisedQuestions(testSavollar));
   testSavollar = newRandomisedQuestions;
 
@@ -90,7 +116,7 @@ let testSavollar = [
           
          let loginTeacher = +prompt("Assalomu alaykum ustoz !\nMarhamat Login parolizni kiriting (6 xonali son):");
          if (loginTeacher==654321){
-          let chooseTecher = +prompt("Quydagilardan birini tanlang (1 yoki 2)!\n 1)Test qo'shish \n 2)Chiqish");
+          let chooseTecher = +prompt("Quydagilardan birini tanlang (1 yoki 2)!\n 1)Test qo'shish \n2)Testni tahrirlash\n3)Chiqish");
           
           if (chooseTecher==1) {
           
@@ -123,8 +149,12 @@ let testSavollar = [
 
             logincheck=false
           }
+
+          else if (chooseTecher==2){
+            editTest(testSavollar);
+          }
           
-          else if (chooseTecher==2) {
+          else if (chooseTecher==3) {
             chekbox=false;
             logincheck=false
           }
