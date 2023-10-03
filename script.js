@@ -51,8 +51,8 @@ let testSavollar = [
       savollar: prompt("Savolni kiriting: ", testSavollar[n - 1].savollar),
       variantlar: [
         prompt("1. variatni kiriting: ", testSavollar[n - 1].variantlar[0]),
-        prompt("2. variatni kiriting: ", testSavollar[n - 1].variantlar[2]),
-        prompt("3. variatni kiriting: ", testSavollar[n - 1].variantlar[1]),
+        prompt("2. variatni kiriting: ", testSavollar[n - 1].variantlar[1]),
+        prompt("3. variatni kiriting: ", testSavollar[n - 1].variantlar[2]),
       ],
       togriJavob: prompt("to'g'ri javob: ", testSavollar[n - 1].togriJavob),
     };
