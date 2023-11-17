@@ -206,6 +206,7 @@ let testSavollar = [
   let wellcome = +prompt("Assalamu alaykum \nPed testing - saytimizga Xush kelibsiz hurmatli mijoz \nPed testing - sayti bilan tanishsh => 1 \nTestni boshlash => 2");
 
   if(wellcome==2){
+    let student=prompt("Iltimos ism familyangizni to'liq kiriting !!!");
     function startTest() {
       let chekbox=true;
       while (chekbox){  
@@ -233,7 +234,7 @@ let testSavollar = [
     
       let togrilikKoeffisenti = (togrijavob / testSavollar.length) * 100;
   
-      alert(`Test natijalari: \nTest ${workingTime} sekund ichida tugadi. \nTo'g'ri javoblar soni: ${togrijavob} \nTo'g'ri javoblar koeffisienti: ${togrilikKoeffisenti}%`);
+      alert(`Test topshiruvchi ${student} \n Test natijalari: \nTest ${workingTime} sekund ichida tugadi. \nTo'g'ri javoblar soni: ${togrijavob} \nTo'g'ri javoblar koeffisienti: ${togrilikKoeffisenti}%`);
   
       chekbox=false;
   
